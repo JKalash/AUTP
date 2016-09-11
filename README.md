@@ -15,7 +15,7 @@ end|<sequence number>|<data>|<checksum>
 
 To initiate a connection, send a start message. The receiver will use the sequence number provided as the initial sequence number for all packets in that connection. After sending the start message, send additional packets over the same connection using the data message type, adjusting the sequence number appropriately. Unsurprisingly, the last data in a connection should be transmitted with the end message type to signal the receiver that the transfer is complete.
 
-Sender accepts acknowledgements from the receiver in the format:
+Senders accept acknowledgements from the receiver in the format:
 
 ```
 ack|<sequence number>|<checksum>
